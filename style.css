@@ -1,0 +1,234 @@
+@import url("https://fonts.cdnfonts.com/css/satoshi");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Satoshi", sans-serif;
+  text-decoration: none;
+}
+
+.container {
+  padding-inline: 6em;
+}
+
+#navbar.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+#navbar.scrolled a,
+#navbar.scrolled i {
+  color: black;
+}
+
+nav .container .menubar {
+  display: none;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  color: white;
+  z-index: 10000;
+  padding: 0.4em 7%;
+}
+nav .container .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4em;
+}
+nav .container .logo p {
+  font-size: 1.1em;
+}
+
+.hero-section {
+  background-image: url(pictures/hero-section.png);
+  background-repeat: repeat; /* or no-repeat, depending on what you want */
+  background-size: cover; /* This scales the image to cover the whole element */
+  background-position: center;
+}
+.hero-section .container {
+  height: 85dvh;
+}
+
+nav .menuList a {
+  font-size: 1.1em;
+  color: white;
+  padding-left: 2em;
+  transition: color 0.3s ease;
+}
+nav .menuList a:hover {
+  color: rgb(163, 163, 163);
+}
+
+nav .social-media i {
+  color: white;
+  padding-left: 1.5em;
+  transition: color 0.3s ease;
+  font-size: 1.1em;
+}
+nav .social-media i:hover {
+  color: rgb(163, 163, 163);
+}
+
+@media (max-width: 920px) {
+  nav .container .social-media {
+    display: none;
+  }
+  .container {
+    padding-inline: 4.5em;
+  }
+  .hero-container .contents {
+    text-align: center;
+  }
+}
+@media (max-width: 720px) {
+  .container {
+    padding-inline: 3.2em;
+  }
+  nav .container .menubar {
+    display: block;
+  }
+  nav .container .menuList {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.1333333333);
+    position: absolute;
+    align-items: center;
+    height: 50dvh;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1em 10%;
+    gap: 1.4em;
+  }
+  nav .container .menuList.active {
+    display: flex;
+  }
+}
+.hero-container {
+  padding-top: 3.5em;
+}
+
+.hero-container {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-container .contents {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.hero-container .contents h2 {
+  font-size: clamp(2.2em, 4vw, 4em);
+  padding-bottom: 0.1em;
+}
+.hero-container .contents button {
+  margin-top: 1.4em;
+  border: none;
+  font-weight: 600;
+  border-radius: 10px;
+  background-color: #00d893;
+  padding: 0.6em 4em;
+}
+.hero-container .card-places-container {
+  grid-auto-flow: column;
+}
+
+.why-section .container {
+  background-color: aqua;
+  padding-block: 5em;
+  background-color: #ffffff;
+}
+.why-section .container .header-whyweChoose {
+  font-size: 2em;
+  text-align: center;
+}
+
+.why-section .container .card-container {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 5em;
+}
+.why-section .container .card-container .imgs {
+  max-width: 10em;
+}
+.why-section .container .card-container .imgs img {
+  width: 100%;
+}
+.why-section .container .card-container .card {
+  justify-items: center;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+@media (max-width: 730px) {
+  .why-section .container {
+    padding-inline: 3.2em;
+  }
+  .why-section .container .card-container {
+    grid-auto-flow: row;
+    gap: 2em;
+  }
+  .container .tourism,
+  .container .ph {
+    text-align: center;
+  }
+}
+.tourism-in-the-ph-section {
+  padding-block: 10em;
+  background-image: url(pictures/tao\ nag\ tan\ aw\ sa\ bundok.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+}
+.tourism-in-the-ph-section .container .tourism {
+  font-size: clamp(3em, 5vw, 4em);
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.532);
+}
+.tourism-in-the-ph-section .container .ph {
+  font-size: clamp(3em, 5vw, 4em);
+  color: #ffd700;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.532);
+}
+
+.placeFeatured .container {
+  padding-block: 5em;
+}
+.placeFeatured .container .place-img img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1/1;
+  height: auto;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.card-places-container {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 300px));
+  justify-content: center;
+  gap: 3%;
+}
+.card-places-container .place-card {
+  background-color: #eaeaea;
+  border-radius: 10px;
+  box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.233);
+}
+.card-places-container .place-card .place-content {
+  padding: 0.4em 0.6em 0.9em 0.6em;
+}
+.card-places-container .place-card .place-content .prices {
+  color: #0ab57f;
+}/*# sourceMappingURL=style.css.map */
