@@ -16,9 +16,18 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   color: black;
 }
-#navbar.scrolled a,
-#navbar.scrolled i {
+
+#navbar.scrolled .menuList a,
+#navbar.scrolled .social-media i {
   color: black;
+}
+
+#navbar.scrolled .social-media i:hover {
+  color: rgb(163, 163, 163);
+}
+
+#navbar.scrolled .menuList a:hover {
+  color: rgb(163, 163, 163);
 }
 
 nav .container .menubar {
@@ -207,7 +216,7 @@ nav .social-media i:hover {
 .placeFeatured .container .place-img img {
   max-width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   aspect-ratio: 1/1;
   height: auto;
   border-radius: 10px 10px 0px 0px;
@@ -217,7 +226,7 @@ nav .social-media i:hover {
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 300px));
+  grid-template-columns: repeat(auto-fill, minmax(120px, 250px));
   justify-content: center;
   gap: 3%;
 }
@@ -231,4 +240,4 @@ nav .social-media i:hover {
 }
 .card-places-container .place-card .place-content .prices {
   color: #0ab57f;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

@@ -17,11 +17,17 @@ $paddingInline: 6em;
   background-color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   color: black;
+}
+#navbar.scrolled .menuList a,
+#navbar.scrolled .social-media i {
+  color: black;
+}
+#navbar.scrolled .social-media i:hover {
+  color: rgb(163, 163, 163);
+}
 
-  a,
-  i {
-    color: black;
-  }
+#navbar.scrolled .menuList a:hover {
+  color: rgb(163, 163, 163);
 }
 
 nav .container .menubar {
@@ -269,7 +275,7 @@ nav {
 
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 300px));
+  grid-template-columns: repeat(auto-fill, minmax(120px, 250px));
   // grid-auto-flow: column;
   justify-content: center;
   gap: 3%;
